@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+.logo img {
+  max-height: 43px;
+  width: auto;
+  display: flex;
+  display: flex;
+  max-width: 100%;
+  height: auto;
+}
+
+.overlay2 {
+  padding: 22px 10.5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("https://assets.nflxext.com/ffe/siteui/vlv3/fb5cb900-0cb6-4728-beb5-579b9af98fdd/web/KH-en-20250127-TRIFECTA-perspective_68dac8ee-7e6c-4d5b-9d57-ada7f07cfea3_large.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signin-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  width: 350px;
+  max-width: 100%;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.signin-container input {
+  width: 100%;
+  padding: 6%;
+  margin: 10px 0;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+.signin-container button {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: 0.5s ease;
+}
+
+.sign-in {
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(260, 9, 20);
+}
+.sign-in:hover{
+  background-color: darkred;
+}
+.sign-code {
+  font-weight: bold;
+  color: white;
+  border: 1px solid grey;
+  border-radius: 4px;
+  background-color: transparent;
+  background-color: rgba(182, 182, 182, 0.3);
+  cursor: pointer;
+}
+.sign-code:hover{
+  background-color: rgba(182, 182, 182, 0.2);
+}
+
+#learn-more {
+  color: rgb(70, 70, 228);
+}
+
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+::placeholder {
+  color: rgb(168, 168, 168);
+  background-color: transparent;
+}
+
+.empw-con {
+  font-size: 15px;
+  color: white;
+  flex: 1;
+  border: 1px solid grey;
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: translateX(-2%);
+  border-radius: 4px;
+}
+.empw-con:focus{
+  border: 2px solid white;
+  border-radius: 8px;
+  outline: none;
+}
+h2 {
+  margin-bottom: 15px;
+  padding: 0;
+  white-space: nowrap;
+  font-size: 35px;
+  margin-right: 100%;
+  font-weight: 700;
+}
+.new-to {
+  color: rgb(190, 190, 190);
+}
+#forget-pw {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: white;
+}
+#forget-pw:hover {
+  color: rgb(163, 161, 161);
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  cursor: pointer;
+  width: fit-content;
+  margin-top: 12px;
+}
+
+.remember-me input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.bottom-p {
+  white-space: nowrap;
+  margin-right: 100%;
+}
+
+.bottom-last {
+  width: 100%;
+  color: rgb(117, 117, 117);
+  font-size: 0.8rem;
+  margin-top: 20px;
+}
