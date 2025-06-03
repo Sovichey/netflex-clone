@@ -1,12 +1,12 @@
-/* Base reset and font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   margin: 0;
-  padding: 0;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: Arial, sans-serif;
   box-sizing: border-box;
 }
 
-/* Full-screen background */
+
 .BG-img {
   width: 100%;
   height: 100vh;
@@ -21,15 +21,18 @@
   background-position: center;
   color: white;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  padding: 0 20px;
-  text-align: center;
 }
 
-/* Header and logo */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 header {
   position: absolute;
   top: 20px;
@@ -40,30 +43,30 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
 }
 .logo img {
-  max-height: 40px;
+  max-height: 43px;
   width: auto;
 }
 
-/* Sign-in button */
 .sign-in-btn {
-  padding: 8px 16px;
+  padding: 8px 10px;
   background: rgb(229, 9, 20);
   color: white;
   border: none;
   border-radius: 4px;
-  font-size: 0.9rem;
+  cursor: pointer;
+  font-size: 0.875rem;
   font-weight: 600;
+  transition: 0.5s ease;
   text-decoration: none;
-  transition: 0.3s ease;
-}
-.sign-in-btn:hover {
-  background: darkred;
 }
 
-/* Content area */
+.sign-in-btn:hover {
+  background: darkred;
+  text-decoration: none;
+}
+
 .content {
   position: relative;
   text-align: center;
@@ -71,95 +74,84 @@ header {
   z-index: 1;
   margin-top: 100px;
 }
+
 .content h1 {
-  font-size: 2.5rem;
+  font-size: 3.4rem;
   font-weight: 700;
+  font-family: poppins;
 }
 .content p {
   margin: 20px 0;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 .font-p2 {
   font-size: 1rem;
   font-weight: normal;
 }
-
-/* Signup form */
 .signup-form {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
   margin-top: 15px;
-  justify-content: center;
 }
+
 .signup-form input {
-  flex: 1 1 250px;
-  padding: 12px;
+  flex: 1;
+  padding: 10px;
   font-size: 1rem;
   border: 1px solid grey;
   border-radius: 4px;
+  background-color: transparent;
+  transform: translateX(-2%);
   background-color: rgba(22, 22, 22, 0.8);
-  color: white;
 }
-.signup-form input:focus {
-  border: 2px solid white;
-  outline: none;
-  border-radius: 8px;
-}
+
 .signup-form button {
-  padding: 12px 24px;
-  font-size: 1.2rem;
+  padding: 15px 30px;
+  font-size: 1.5rem;
   border: none;
   background: rgb(229, 9, 20);
   color: white;
-  font-weight: 600;
+  font-weight: 550;
   border-radius: 4px;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
   cursor: pointer;
 }
+
 .signup-form button:hover {
   background: darkred;
+}
+
+.email-container {
+  color: white;
+}
+.email-container:focus {
+  border: 2px solid white;
+  border-radius: 8px;
+  outline: none;
 }
 
 ::placeholder {
   color: rgb(190, 190, 190);
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
+  padding-left: 2px;
 }
 
-/* Features section */
 .features {
   background-color: black;
+  font-family: poppins;
   color: white;
-  padding: 40px 20px;
 }
-.features .row {
-  max-width: 1000px;
-  margin: auto;
+
+@media screen and (max-width:600px){
+  body{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 20px;
-    top: 10px;
-  }
-
-  .sign-in-btn {
-    padding: 6px 10px;
-    font-size: 0.8rem;
-  }
-
-  .content {
-    margin-top: 80px;
-    padding: 0 20px;
-  }
-
   .content h1 {
-    font-size: 2rem;
-    line-height: 2.4rem;
+    font-size: 2.2rem;
   }
 
   .content p {
@@ -168,17 +160,59 @@ header {
 
   .signup-form {
     flex-direction: column;
+    align-items: center;
     gap: 10px;
   }
 
   .signup-form input,
   .signup-form button {
-    width: 100%;
-    transform: none;
+    width: 90%;
+    font-size: 1rem;
+    padding: 12px;
   }
 
   .signup-form button {
     font-size: 1.2rem;
-    padding: 12px;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .logo img {
+    max-height: 35px;
+  }
+
+  .sign-in-btn {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content h1 {
+    font-size: 1.8rem;
+  }
+
+  .content p {
+    font-size: 0.95rem;
+  }
+
+  .signup-form input,
+  .signup-form button {
+    width: 100%;
+  }
+
+  .features .text-col h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
